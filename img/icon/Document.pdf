@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://127.0.0.1:5500/stm_group.html -->
+<html lang="ka"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.conteiteri {
+    display: flex;
+    overflow: auto;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+h1 {
+            width: 100%;
+            text-align: center;
+            padding-bottom: 5px;
+            border-bottom: 2px solid black;
+        }
+
+        .head_line {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    border-bottom: 0.5px solid black;
+    border-top: 0.5px solid black;
+    align-items: center;
+}
+
+
+h3 {
+            display: inline;
+            min-width: 150px;
+            max-width: 250px;
+
+            margin: 5px;
+        }
+        .produqti{
+            padding: 3px;
+            display: inline;
+            min-width: 150px;
+            max-width: 250px;
+
+            border-left: 1px solid black;
+            padding-left: 5px;
+height: 100%;
+        }
+
+        .user_line{
+            align-items: center;
+            justify-content: center;
+            width: 95%;
+            height: 50px;
+            background-color: grey;
+            margin: 10px;
+        }
+::placeholder{
+    color: white;
+}
+        .user_line_item{
+            padding: 10px;
+            margin: 5px;
+            width: 20%;
+            border-radius: 10px 0px 0px 10px;
+            border: none;
+            background: none;
+            outline: none;
+            font-size: large;
+            color: #000;
+            
+            font-weight: bolder;
+            background-color: darkgreen;
+            box-shadow: 2px -2px 3px 2px inset yellow;
+        }
+
+        .user_line_item:focus{
+            box-shadow: 0px 2px 3px 2px inset yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <script>
+let head_line_content = [
+  "N.",
+  "დასახელება",
+  "კომენტარი",
+  "რაოდენობა",
+  "ერთეული/ც. ფასი",
+  "საერთო ფასი"
+];
+
+let sabrunavi_sashualebeis_sia = [
+  ['N_', 'საბურავები', 'ვარგისი', '1000', '70', 'ჯამი'],
+  ['N_', 'საბურავები', 'წუნდებული', '300', '5', 'ჯამი'],
+  ['N_', 'დისკები', 'ვარგისი', '100', '25', 'ჯამი'],
+  ['N_', 'დისკები', 'წუნდებული', '5', '20', 'ჯამი'],
+  ['N_', 'აკუმულატორი', 'ვარგისი', '2', '100', 'ჯამი'],
+  ['N_', 'აკუმულატორი', 'წუნდებული', '1', '20', 'ჯამი']
+];
+
+
+
+
+
+
+
+
+let conteiteri = document.createElement('div');
+conteiteri.className = "conteiteri";
+let satauri = document.createElement('h1');
+satauri.textContent = "შპს.'ს.ტემუ' - საბრუნავი საშუალებების სია";
+
+let head_line = document.createElement('div');
+head_line.className = "head_line";
+
+for (let i = 0; i < head_line_content.length; i++) {
+  let head_line_item = document.createElement('h3');
+  head_line_item.textContent = head_line_content[i];
+
+
+  head_line.append(head_line_item);
+
+}
+
+let user_line = document.createElement('div');
+user_line.className = "user_line";
+
+for (let v = 1; v <= head_line_content.length -2; v++) {
+  let user_line_item = document.createElement("input");
+  user_line_item.className ="user_line_item";
+
+  user_line_item.placeholder = head_line_content[v];
+
+  user_line.append(user_line_item);
+}
+
+conteiteri.append(satauri,  user_line, head_line);
+
+for (let i = 0; i < sabrunavi_sashualebeis_sia.length; i++) {
+  let row = document.createElement('div');
+  row.className = "head_line";
+
+  for (let j = 0; j < sabrunavi_sashualebeis_sia[i].length; j++) {
+    let gasayidi_prodiqcia = document.createElement("div");
+    gasayidi_prodiqcia.className = "produqti";
+
+    if (j === 0) {
+      gasayidi_prodiqcia.textContent = sabrunavi_sashualebeis_sia[i][j] + i;
+    } else if (j === sabrunavi_sashualebeis_sia[i].length - 1) {
+      let sul = sabrunavi_sashualebeis_sia[i][j - 1] * sabrunavi_sashualebeis_sia[i][j - 2];
+      gasayidi_prodiqcia.textContent = sabrunavi_sashualebeis_sia[i][j] + "-" + sul;
+    } else {
+      gasayidi_prodiqcia.textContent = sabrunavi_sashualebeis_sia[i][j];
+    }
+
+    row.append(gasayidi_prodiqcia);
+  }
+
+  conteiteri.append(row);
+}
+
+document.body.append(conteiteri);
+
+        
+    </script><div class="conteiteri"><h1>შპს.'ს.ტემუ' - საბრუნავი საშუალებების სია</h1><div class="user_line"><input class="user_line_item" placeholder="დასახელება"><input class="user_line_item" placeholder="კომენტარი"><input class="user_line_item" placeholder="რაოდენობა"><input class="user_line_item" placeholder="ერთეული/ც. ფასი"></div><div class="head_line"><h3>N.</h3><h3>დასახელება</h3><h3>კომენტარი</h3><h3>რაოდენობა</h3><h3>ერთეული/ც. ფასი</h3><h3>საერთო ფასი</h3></div><div class="head_line"><div class="produqti">N_0</div><div class="produqti">საბურავები</div><div class="produqti">ვარგისი</div><div class="produqti">1000</div><div class="produqti">70</div><div class="produqti">ჯამი-70000</div></div><div class="head_line"><div class="produqti">N_1</div><div class="produqti">საბურავები</div><div class="produqti">წუნდებული</div><div class="produqti">300</div><div class="produqti">5</div><div class="produqti">ჯამი-1500</div></div><div class="head_line"><div class="produqti">N_2</div><div class="produqti">დისკები</div><div class="produqti">ვარგისი</div><div class="produqti">100</div><div class="produqti">25</div><div class="produqti">ჯამი-2500</div></div><div class="head_line"><div class="produqti">N_3</div><div class="produqti">დისკები</div><div class="produqti">წუნდებული</div><div class="produqti">5</div><div class="produqti">20</div><div class="produqti">ჯამი-100</div></div><div class="head_line"><div class="produqti">N_4</div><div class="produqti">აკუმულატორი</div><div class="produqti">ვარგისი</div><div class="produqti">2</div><div class="produqti">100</div><div class="produqti">ჯამი-200</div></div><div class="head_line"><div class="produqti">N_5</div><div class="produqti">აკუმულატორი</div><div class="produqti">წუნდებული</div><div class="produqti">1</div><div class="produqti">20</div><div class="produqti">ჯამი-20</div></div></div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>

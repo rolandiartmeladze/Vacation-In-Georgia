@@ -1,0 +1,687 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js"></script>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Vacation in Georgia</title>
+
+
+<style>
+
+</style>
+</head>
+<body onload="main(); about();">
+    <style>
+body {
+    background-image: url(img/rabat_03.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+        .header_about{
+            height: 15vh;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+        .slider_image{position: relative;
+            height: auto;
+            max-height: 100%;
+            width: 33%;
+        }
+        .navigation{
+            min-height: 100px;    top: 10px;    max-height: 150px;    position: absolute;
+
+
+
+        }
+        .contact_title{background: none; margin-top: 20px; font-size: xx-large;  }
+
+        .body_section{
+            background: none;
+            height:auto;
+        }
+        .about_us{width: 100%;
+        display: flex;}
+
+        .about_me_us {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 60%;
+    /* background-color: green; */
+    font-size: larger;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+        .about_me_us_title{
+            padding: 5px;
+            margin: 5px;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+            /* width: 100%; */
+            border-bottom: 3px black double;
+            text-align: center;
+            color: rebeccapurple;
+        }
+        .about_me_us p{
+            cursor: default;
+            border: 5px double rgb(71, 4, 4);
+            border-bottom: none;
+            background-color: rgb(103, 96, 96, 0.3);
+            color: white;
+            width: 80%;
+            padding: 30px 20px 30px 20px;
+            border-radius: 30px 30px 0px 0px;
+            text-align: justify;
+            margin: 15px;
+            margin-top: 5px;
+            }
+        .about_me_us p:hover{
+            background-color: rgb(103, 96, 96, 0.8);
+
+        }
+        b{
+            color: rgb(208, 249, 4);
+            font-size: larger;
+            font-weight: bolder;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .rate {
+    width: 40%;
+    /* height: 150px; */
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.about_rate_title{
+    border-bottom: 3px black double;
+
+    color: rgb(210, 105, 30);
+            padding: 5px;
+            margin: 5px;
+        }
+        .rate_list {
+            border-left: 6px solid rgb(74, 31, 1) ;
+    display: flex;
+    width: 80%;
+    padding: 5px;
+    background-image: linear-gradient(to right, rgb(12, 129, 100), rgb(210, 105, 30,0.0));
+    align-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.rate_list li {
+            /* background-color: green; */
+            /* margin-left: 3%; */
+            width: 90%;
+    display: flex;
+    padding: 1px;
+    margin: 1px;
+    margin-left: 3%;
+    align-items: center;
+}
+
+.rate_list li img{ width: 25px; }
+
+        .rate_list li samp{
+            /* background-color: green; */
+            margin-right: 10px;
+            margin-left: 10px;
+            width: 80px;
+            height: 100%;
+            font-weight: bolder;
+            font-size: x-large;
+        }
+
+        .rate_contact  { display: flex; }
+
+
+
+        .rate_contact  img{ width: 15px !important; }
+
+
+        .user_rate_title{
+            /* background-color: rgb(165, 42, 42); */
+            background-image: linear-gradient(to bottom,  rgb(165, 42, 42, 1), rgb(210, 105, 30,0.0));
+
+            margin-top: 0px;
+            width: 99%;
+        }
+
+
+
+        .personal_rate {
+            padding-bottom: 30px;
+    display: flex;
+    border-radius: 5px;
+    border-top: 6px double brown;
+    width: 98%;
+    /* height: 500px; */
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+}
+
+
+.rate_conteiner {
+    border-radius: 20px;
+
+    display: flex;
+    width: 80%;
+    /* height: 300px; */
+    background-color: rgb(123, 119, 119, 0.5);
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin-top: 10px;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+        .rate_userline{
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .rate_userline_info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    border-bottom: 2px solid black;
+    justify-content: space-between;
+}
+
+.rate_userline_info li { display: flex; padding: 2px; margin: 5px; align-items: flex-end; }
+
+.rate_userline_info li img{ width: 20px; margin-right: 5px; }
+
+.rate_user_name{ font-size: x-large; font-weight: bolder; text-decoration: underline;}
+.rate_user_name img{ width: 30px !important; }
+
+
+
+         .rate_data{ font-weight: bolder;  margin-bottom: 2px !important; }
+
+         .rate_view{ float:right;  margin-bottom: 2px !important; }
+
+         .rate_share{
+            float:right;
+            cursor: pointer;
+            transition: 1s ease-in-out;
+            margin-bottom: 2px !important;
+
+         }
+         .rate_share:hover{
+            transform: scale(1.09);
+            color: blue;
+            text-decoration: underline;
+         }
+
+         .rigth_line{ display: flex; }
+
+         .rate_info{
+            margin-top: 0px;
+            width: 100%;
+            font-weight: bolder;
+            font-size: large;
+         }
+
+
+
+         .rate_media {
+    display: flex;
+    width: 40%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+
+
+
+         .rate_media_title {
+            width: 100%;
+            display: block;
+    padding: 5px;
+    margin: 0px;
+    font-weight: bolder;
+    font-size: x-large;
+    /* background-color: green; */
+}
+
+
+.media_img_conteiner {
+    display: flex;
+    width: 100%;
+    /* height: 100%; */
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+         .media_img_conteiner img{
+
+            max-width: 100%;
+            width: 90%;
+            height: auto;
+            max-height: 80% ;
+         }
+
+
+         .rate_text {
+    display: flex;
+    width: 60%;
+    /* background-color: blueviolet; */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+
+
+.rate_elements{
+            width: 90%;
+            border-top: 2px solid black;
+            padding-bottom: 10px;
+         }
+         .rate_elements li{
+            margin-top: 10px !important;
+         }
+
+
+         .rate_list_title{
+            display: flex;
+            align-items: flex-end;
+            width: 95%;
+            margin: 5px;
+            font-size: larger;
+         }
+.rate_list_title img{
+    width: 35px;
+    margin-right: 10px;
+}
+
+.transport_rate {
+    margin-left: 30px !important;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: flex-end;
+}
+.coment{
+    margin-left: 50px !important;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+.coment p {
+    padding: 0px;
+}
+.transport_rate img{
+    width: 25px;
+    margin-right: 5px;
+}
+.rate_contact img {
+ margin: 1px;
+}
+
+
+
+@media screen and (max-width: 500px){
+
+    .body_section {
+    margin-top: 60px;
+}
+
+.about_us {
+    flex-direction: column-reverse;
+}
+
+
+.about_me_us {
+    width: 100%;
+}
+
+.about_me_us p {
+    cursor: default;
+    border: none;
+    width: 100%;
+    padding: 10px 5px 10px 5px;
+    border-radius:0px;
+    font-size: medium;
+
+    background-color: rgb(103, 96, 96, 0.6);
+    color: rgb(255, 255, 255);
+}
+.rate {
+    width: 100%;
+}
+
+.rate_list {
+    width: 90%;
+}
+
+
+
+    .rate_conteiner {
+    width: 100%;
+border-radius: 0px;
+}
+.rate_media {
+    width: 100%;
+}
+.rate_text {
+    margin-top: 10px;
+    width: 100%;
+}
+}
+    </style>
+
+    <header class="header header_about">
+<!-- <img class="slider_image" src="img/bat_01.jpg"> -->
+
+<a href="geo/about.html">  <div class="lang">
+    <img src="img/icon/geo.png">
+</div>
+</a>
+
+
+        <nav class="navigation">
+
+            <div class="logo">
+                <img class="logo_img" src="img/logo.png">
+            </div>
+
+                <div class="nav_rigth">
+
+                    <ul class="head_cont">
+                        <li id="phone"  class="phone">
+                            <div class="head_cont_icon">
+                                <img  class="head_cont_icon_image phone_icons" src="img/icon/phone.png">
+                            </div>
+                                <div class="head_cont_icon_text">
+                                    (+995) 577 19-75-83
+                                </div>
+                        </li>
+                            <li class="mail">
+                              <div class="head_cont_icon">
+                                <img class="head_cont_icon_image" src="img/icon/gmail.png">
+                              </div>
+                              <div class="head_cont_icon_text">touristagency0@gmail.com</div>
+                            </li>
+                        
+                        </ul>
+                <div id="mob_menu_btn" class="mob_menu_btn">
+                    <div id="line1" class="line"></div>
+                    <div id="line2" class="line"></div>
+                    <div id="line3" class="line"></div>
+                </div>
+    
+                <ul id="meniu" class="meniu">
+
+                    <li class="home">HOME</li>
+                    <li class="about">ABOUT</li>
+                    <li class="tours">TOURS</li>
+                    <li class="cars">CARS</li>
+                    <li class="gallery">GALLERY</li>
+                    <li class="contact">CONTACT</li>
+                </ul>
+                </div>
+                
+        </nav>
+
+
+
+
+
+    </header>
+
+<section class="body_section">
+<h1 class="contact_title">about us</h1>
+
+
+
+
+<div class="about_us">
+
+    <div class="rate">
+        <h2 class="about_rate_title">Tours by rating</h2>
+
+
+        <ul id="rate_list" class="rate_list">
+            <!-- <li> <img src="img/icon/rating.png" alt=""> <samp>Rolandi</samp> 
+                <div class="" >
+                    <img class="rate_contact" src="img/icon/rate_star1.png">
+                    <img class="rate_contact" src="img/icon/rate_star1.png">
+                    <img class="rate_contact" src="img/icon/rate_star1.png">
+                    <img class="rate_contact" src="img/icon/rate_star1.png">
+                    <img class="rate_contact" src="img/icon/rate_star1.png">
+                </div>
+        </li> -->
+        </ul>
+
+
+
+    </div>
+
+
+<div class="about_me_us"><h2 class="about_me_us_title">Vacation in georgia</h2>
+    <p>    
+
+    Our company "<b>Vacation in Georgia</b>" was founded in 2018. It is a customer-oriented travel company that cares about your comfort and happiness. "Your satisfaction is our priority".
+    Our team members ensure that you receive the highest quality service in a comfortable environment and service tailored to you.
+    The company offers both pre-selected routes and tours in the most beautiful places and corners of Georgia, as well as allows you to select the routes yourself by combining one or several locations, choosing the desired and convenient service and services.
+    It is possible to plan both individual and group tours, including transportation and pre-booking accommodation in the case of a multi-day tour.
+</p>
+
+
+    <!-- ჩვენი კომპანია "დასვენება საქართველოში" დაარსდა 2018 წელს . ეს არის მომხმარებელზე ორიენტირებულ ტურისტული კომპანია რომელიც ზრუნავს თქვენს კომფორტსა და ბედნიერებაზ. "თქვენი კმაყოფილება ჩვენი პრიორიტეტია".
+    ჩვენი გუნდის წევრები ზრუნავენ იმაზე რომ თქვენ მიიღოთ უმარლესი ხარისხის მომასხურება კომფორტული თქვენზე მორგებული გარემო და სერვისი.
+    კომპანია გთავაზობთ როგორც წინასწარ შერჩეულ მარშრუტებსა და ტურებს საქართველოს ულამაზეს ადგილებსა და კუთხეებში ასევე საშუალებას გაძლევთ თვითონ შეარჩოთ მარშრუტები ერთი ან რამოდენიმე ლოკაციის კომბინაციითი შეარჩიოთ ტქვვენთვის სასურველი და მოსახერხებელი სერვისი და მომსახურება.
+    შესაძლებელია როგორც ინდივიდუალური ასევე ჯგუფური ტურების დაგეგმვა, ტრანსპორტირების გამყოლისა და მომასვენებელი სივრცის წინასწარი დაჯავშნით მრავალდღიანი ტურის შემთხვევაში.
+     -->
+
+
+</div>
+
+
+</div>
+
+
+<div class="personal_rate">
+
+
+    <h2 class="contact_title user_rate_title">User rating</h2>
+
+
+    <div class="rate_conteiner">
+
+        <div class="rate_userline">
+            <ul class="rate_userline_info">
+                <div class="rigth_line">
+                <li class="rate_user_name"> <img src="img/icon/person.png"> Roland Rrtmeladze</li>
+                </div>
+                    <div class="rigth_line">
+                    <li  class="rate_view" >  <img src="img/icon/view.png">View: 1700</li>
+                    <li class="rate_data"> <img src="img/icon/data.png"> 06.06.2023/20:22</li>
+                    <li  class="rate_share">  <img src="img/icon/share.png">Share rate</li>
+                </div>
+                <!-- <li class="rate_info" >Service and general assessment of services</li> -->
+            </ul>
+        </div>
+
+
+        <div class="rate_media">
+                <h3 class="rate_media_title">Service and service evaluation</h3>
+                
+                    <div class="media_img_conteiner"> <img src="img/tbil_09.jpg" alt=""></div>
+           
+
+
+
+        </div>
+
+        <div class="rate_text">
+
+            <ul class="rate_elements">
+                <h2 class="rate_list_title"><img src="img/icon/rate_car.png"> Rate the transport</h2>
+                    <li class="transport_rate"> 
+                        <img src="img/icon/rating.png">
+                            <div class="rate_contact" >
+                                <img src="img/icon/rate_star1.png">
+                                <img src="img/icon/rate_star1.png">
+                                <img src="img/icon/rate_star1.png">
+                                <img src="img/icon/rate_star1.png">
+                                <img src="img/icon/rate_star1.png">
+                            </div>
+                    </li>
+                        <li class="transport_rate coment">
+                            <img src="img/icon/coment.png">
+                                <P>
+                                    Lorem ipsum, dolor sit amet consectetur 
+                                    adipisicing elit. Tempora, 
+                                    laboriosam repudiandae. 
+                                </P>
+                        </li>
+            </ul>
+
+                <ul class="rate_elements">
+                    <h2 class="rate_list_title"><img src="img/icon/rate_eat.png"> Rate the food</h2>
+                        <li class="transport_rate"> 
+                            <img src="img/icon/rating.png">
+                                <div class="rate_contact" >
+                                    <img src="img/icon/rate_star1.png">
+                                    <img src="img/icon/rate_star1.png">
+                                    <img src="img/icon/rate_star1.png">
+                                    <img src="img/icon/rate_star1.png">
+                                    <img src="img/icon/rate_star1.png">
+                                    </div>
+                        </li>
+                            <li class="transport_rate coment">
+                                <img src="img/icon/coment.png">
+                                    <P>
+                                        Lorem ipsum, dolor sit amet consectetur 
+                                        adipisicing elit. Tempora, 
+                                        laboriosam repudiandae.
+                                    </P>
+                            </li>
+                </ul>
+
+                    
+                    <ul class="rate_elements">
+                        <h2 class="rate_list_title"><img src="img/icon/rate_hotel.png"> Rate the hotel</h2>
+                            <li class="transport_rate"> 
+                                <img src="img/icon/rating.png">
+                                    <div class="rate_contact" >
+                                        <img src="img/icon/rate_star1.png">
+                                        <img src="img/icon/rate_star1.png">
+                                        <img src="img/icon/rate_star1.png">
+                                        <img src="img/icon/rate_star1.png">
+                                        <img src="img/icon/rate_star1.png">
+                                    </div>
+                            </li>
+                                <li class="transport_rate coment">
+                                    <img src="img/icon/coment.png">
+                                        <P>
+                                            Lorem ipsum, dolor sit amet consectetur 
+                                            adipisicing elit. Tempora, 
+                                            laboriosam repudiandae. 
+                                        </P>
+                                </li>
+                    </ul>
+
+                        <ul class="rate_elements">
+                            <h2 class="rate_list_title"><img src="img/icon/person.png"> Share a note or comment with us</h2>
+                            <li class="transport_rate coment">
+                                <img src="img/icon/coment.png">
+                                
+                                <P>
+                                    Lorem ipsum, dolor sit amet consectetur 
+                                    adipisicing elit. Tempora, 
+                                    laboriosam repudiandae.
+                                </P>
+
+                            </li>
+                        </ul>
+
+            
+        </div>
+
+
+
+
+
+    </div>
+
+
+</div>
+
+
+</section>
+
+<div id="social_conteiner" class="social_conteiner">
+    <div id="float_btn" class="float"> <img id="float_btn_img" src="img/icon/messenger.png"></div>
+        <div id="wats" class="soc_icons wast"> <img src="img/icon/whatsapp.png"></div>
+        <div id="vib" class="soc_icons vib"> <img src="img/icon/viber.png"> </div>
+        <div id="mes" class="soc_icons mes"> <img src="img/icon/messenger.png"> </div>
+</div>
+
+
+<footer  id="footer">
+    <ul>
+        <li class="title">Admin</li>
+        <li>roland artmeladze</li>
+        <li>+995 595 03 56 68</li>
+        <li>rartmeladze@gmail.com</li>
+    </ul>
+        <ul>
+            <li  class="title">Meniu</li>
+            <li>Tours</li>
+            <li>Cars</li>
+            <li>Gallery</li>
+        </ul>
+            <ul>
+                <li  class="title">Contact</li>
+                <li>touristagency0@gmail.com</li>
+                <li>(+995) 577 19-75-83</li>
+                <li>Kvemo-Kartli, Tsalka.</li>
+            </ul>
+            <div class="adnin_info">@ Roland Artmeladze   2023</div>
+</footer>
+
+    
+    <script src="main.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

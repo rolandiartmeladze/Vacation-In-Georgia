@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js"></script>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Vacation in Georgia</title>
+
+
+<style>
+    .logi {
+        top: 35px;
+    }
+.header_contact{
+    height: auto;
+    background-color: aquamarine;
+    background-image: url(img/baner_contact1.jpg);
+    background-position:center;
+    background-size: cover;
+}
+.navigation{
+    height: 100px;
+    }
+    section{
+        margin-top: 0px;
+    }
+
+
+    .head_contact_contact{
+    background-image: linear-gradient(to right, rgba(5, 5, 5, 0.9), rgba(123, 126, 124, 0.3));
+}
+.meniu_contact{
+border-top: 8px rgb(5, 5, 5) solid;
+}
+
+.meniu_contact li { background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0.9), rgba(123, 126, 124, 0.3)); color: white;}
+                .meniu_contact li:hover{background-image: linear-gradient(to top, rgba(5, 5, 5, 0.9), rgba(123, 126, 124, 0.3)); color: yellow;
+                    box-shadow: 1px -1px 8px 0px inset rgb(251, 231, 6), 0px 4px 10px 0px  rgb(249, 251, 250);
+}
+
+
+
+
+.mail_cont:hover {color: yellow }
+            .phone_cont:hover { color: yellow }
+
+
+
+
+
+.section_contact{
+    
+    background-image: url(img/contact_bacground.jpg);
+    background-position:center;
+    background-size: cover;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 500px){
+
+
+.logo {
+    left: 15px;
+    top: 30px;
+    z-index: 2;
+    position: absolute;
+    height: 60%;
+    width: auto;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body onload="meniu_nav(); footer_resolution(); mob_menu_btn(); contact()">
+
+    <header class="header header_contact">
+<!-- <img class="slider_image" src="img/bat_01.jpg"> -->
+
+
+<a href="geo/contact.html">  <div class="lang">
+    <img src="img/icon/geo.png">
+</div>
+</a>
+
+
+        <nav class="navigation">
+
+            <div class="logo">
+                <img class="logo_img" src="img/logo.png">
+            </div>
+
+                <div class="nav_rigth">
+
+                    <ul class="head_cont head_contact_contact">
+                        <li id="phone"  class="phone phone_cont">
+                            <div class="head_cont_icon">
+                                <img class="head_cont_icon_image phone_icons" src="img/icon/phone.png">
+                            </div>
+                                <div class="head_cont_icon_text">
+                                    (+995) 577 19-75-83
+                                </div>
+                        </li>
+                            <li class="mail mail_cont">
+                              <div class="head_cont_icon">
+                                <img class="head_cont_icon_image" src="img/icon/gmail.png">
+                              </div>
+                              <div class="head_cont_icon_text">touristagency0@gmail.com</div>
+                            </li>
+                        
+                        </ul>
+                <div id="mob_menu_btn" class="mob_menu_btn">
+                    <div id="line1" class="line"></div>
+                    <div id="line2" class="line"></div>
+                    <div id="line3" class="line"></div>
+                </div>
+    
+                <ul id="meniu" class="meniu meniu_contact">
+
+                    <li class="home">HOME</li>
+                    <li class="about">ABOUT</li>
+                    <li class="tours">TOURS</li>
+                    <li class="cars">CARS</li>
+                    <li class="gallery">GALLERY</li>
+                    <li class="contact">CONTACT</li>
+                </ul>
+                </div>
+                
+        </nav>
+
+        <h1 class="contact_title">contact</h1>
+
+
+
+    </header>
+
+
+
+<section class="body_section section_contact">
+
+
+    <div class="contact_conteiner">
+<h2 class="contact_title2">Your opinion is important</h2>
+
+<div class="connect_us">
+
+<ul>
+    <h3 class="contact_title3">Contact us</h3>
+        <li>
+            <div class="item"><img src="img/icon/_location.png" alt=""> ADDRESS:</div>
+                <div class="result"> Georgia, Tbilisi</div>
+        </li>
+            <li>
+                <div class="item"><img src="img/icon/_phone-call.png" alt=""> PHONE:</div>
+                    <div class="result"> (+995) 577 19-75-83</div>
+            </li>
+                <li>
+                    <div class="item"><img src="img/icon/_gmail.png" alt=""> GMAIL:</div>
+                        <div class="result"> touristagency0@gmail.com</div>
+                </li>
+                    <li>
+                        <div class="item"><img src="img/icon/_web_page.png" alt=""> WEBSITE:</div>
+                        <div class="result"> Vacationingeorgia.ge</div>
+                        
+                    </li>
+                        <li>
+                            <div style="margin-bottom: 10px;" class="item">
+                                <img src="img/icon/facebook.png" alt="">
+                                <img src="img/icon/instagram.png" alt=""> 
+                                <img src="img/icon/youtube.png" alt="">
+                            </div>
+                                <div class="result_soc"> facebook.com/vacationingeorgia</div>
+                                    <div class="result_soc"> instagram.com/vacationingeorgia</div>
+                                        <div class="result_soc"> youtube.com/vacationingeorgia</div>
+                        </li>
+</ul>
+
+
+</div>
+<div class="connect_form">
+
+
+    <form action="send">
+            <h3 class="contact_title3">Write to us</h3>
+
+            <input type="text" placeholder="you name">
+            <input type="email" placeholder="you email">
+            <input type="text" placeholder="subject">
+            <textarea name="message" id="" cols="30" rows="5"  placeholder="write you message hear..."></textarea>
+            <button>Send</button>
+    </form>
+
+
+
+    
+
+
+
+</div>
+
+    </div>
+
+</section>
+
+<div id="social_conteiner" class="social_conteiner">
+    <div id="float_btn" class="float"> <img id="float_btn_img" src="img/icon/messenger.png"></div>
+        <div id="wats" class="soc_icons wast"> <img src="img/icon/whatsapp.png"></div>
+        <div id="vib" class="soc_icons vib"> <img src="img/icon/viber.png"> </div>
+        <div id="mes" class="soc_icons mes"> <img src="img/icon/messenger.png"> </div>
+</div>
+
+
+<footer  id="footer">
+    <ul>
+        <li class="title">Admin</li>
+        <li>roland artmeladze</li>
+        <li>+995 595 03 56 68</li>
+        <li>rartmeladze@gmail.com</li>
+    </ul>
+        <ul>
+            <li  class="title">Meniu</li>
+            <li>Tours</li>
+            <li>Cars</li>
+            <li>Gallery</li>
+        </ul>
+            <ul>
+                <li  class="title">Contact</li>
+                <li>touristagency0@gmail.com</li>
+                <li>(+995) 577 19-75-83</li>
+                <li>Kvemo-Kartli, Tsalka.</li>
+            </ul>
+            <div class="adnin_info">@ Roland Artmeladze   2023</div>
+</footer>
+
+    
+    <script src="main.js"></script>
+
+</body>
+</html>

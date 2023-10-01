@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js"></script>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Vacation in Georgia</title>
+
+
+<style>
+
+
+body {
+    background-image: url(img/tsalka_06.jpg);
+    background-position: center;
+    background-size: cover;
+}
+    /* .logo{
+        min-height: 80px;
+        max-width: 160px;
+    } */
+.book_now_conteiner_active {
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex !important;
+    width: 50%;
+    height: 100vh !important;
+    background-color: darkgray;
+    position: fixed;
+    z-index: 3;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    opacity: 1 !important;
+
+}
+
+.book_now_conteiner {
+    display: none;
+    opacity: 0;
+    transition: 1.5s ease-in-out;
+}
+
+
+.close_book_now_conteiner {
+    width: 95%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.close_book_now_conteiner img{
+        width: 40px;
+        height: 40px;
+    }
+
+
+
+.book_now_conteiner h1{
+        margin: 5px;
+        padding: 5px;
+        width: 100%;
+        text-align: center;
+        text-decoration: underline;
+    }
+    
+    .book_now_form {
+
+    display: flex;
+    width: 90%;
+
+}
+
+
+.book_now_form li {
+    display: flex;
+    justify-items: center;
+    width: 70%;
+    margin: 0px;
+    align-items: center;
+}
+
+.book_now_form li img {
+    width: 35px;
+    margin: 2px;
+}
+.book_now_form input {
+
+    background: none;
+
+    font-size: small;
+    border-radius: 0px;
+
+}
+
+.book_now_form input[type="date"] {width: 40%;}
+
+    .user_info{
+        width: 90%;
+        padding: 10px;
+        border-top: 1px solid wheat;
+
+        margin-bottom: 10px;
+        color: white;
+    }
+    .user_info samp{
+    padding: 6px;
+    background-color: rgb(234, 229, 229, 0.6);
+    border-radius: 10px 0px 0px 10px;
+    margin-right: 10px;
+    font-weight: bolder;
+    color: red;
+    }
+    .book_now_form span {
+    margin-top: -5px;
+    margin-left: -35px;
+    display: flex;
+    cursor: default;
+
+    padding: 0px 10px 0px 10px;
+
+    border-radius: 100%;
+    align-items: flex-start;
+    flex-direction: row;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+.simbolo {
+    color: red;
+    font-size: x-large;
+    margin-top: -20px;
+    margin-left: -0px;
+}
+.vertical-line {
+    margin: 5px;
+  height: 3px;
+  width: 100%;
+  background-color: black;
+}
+.book_tour_list{
+    display: flex;
+    width: 100%;
+    height: 40px;
+    /* background-color: rgb(161, 96, 5, 0.7); */
+
+    margin: 5px;
+    margin-top: 0px;
+}
+.book_tour_list_select{
+    outline: none;
+    background: none;
+    border: none;
+    width: 100%;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.book_tour_list_select:optional {  background-color: rgb(161, 96, 5, 0.3); }
+.book_tour_list img{ width: 45px; }
+
+.selection {
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    border: 5px;
+    flex-wrap: wrap;
+}
+.select_car{
+    background: none;
+    border: none;
+    outline: none;
+    font-size: larger;
+    font-weight: bolder;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.select_car:optional {  background-color: rgb(161, 96, 5, 0.3); }
+
+
+.select_food{
+    margin-bottom: 5px;
+    background: none;
+    border: none;
+    outline: none;
+
+    font-size: larger;
+    font-weight: bolder;
+    padding: 5px;
+
+}
+.select_food:optional {  background-color: rgb(161, 96, 5, 0.3); }
+
+.selection img{
+    width: 45px;
+    /* max-height: 80%; */
+    margin-right: 5px;
+}
+
+.select_lin {
+    display: flex;
+    align-items: stretch;
+}
+.comentar img{
+    width: 45px;
+    margin-top: 5px;
+}
+.comentar {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+.you_message{ 
+    border-radius: 0px;
+    background-image: linear-gradient(to right, rgb(161, 96, 5, 0.6),  rgba(5, 123, 11, 0.0) ) !important;
+    box-shadow: 5px -5px 18px 1px inset rgba(78, 46, 2, 0.8);
+}
+.you_message:focus{ 
+    box-shadow: -5px 0px 18px 1px inset rgba(78, 46, 2, 0.8);
+}
+.btn{
+    margin-left: 50px;
+    box-shadow: 3px 3px 20px 5px inset;
+    border-radius: 10px !important;
+    width: 30%;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+.btn:hover{
+    font-size: larger;
+    box-shadow: 0px 0px 5px 2px inset;
+    transform: scale(1.09);
+    text-shadow: 0px -1px  rgb(252, 250, 250);
+
+}
+@media screen and (max-width: 750px){
+    .book_now_conteiner {width: 70%;}
+}
+@media screen and (max-width: 500px){    
+    .book_now_conteiner {width: 100%; z-index: 15;}
+    .book_now_conteiner h1 {font-size: medium;}
+    .user_info { margin-bottom: 2px; font-size: x-small; }
+    .book_now_form input { padding: 8px; margin: 2px; }
+    .book_now_form li img { width: 20px;}
+    .book_tour_list_select { font-size: small;}
+    .book_tour_list img { width: 30px; }
+    .book_tour_list { height: auto; }
+    .selection img { width: 30px; }
+    .select_car { font-size: small; }
+    .select_food { font-size: small; }
+    .comentar img {width: 30px; }
+    .you_message {font-size: medium; padding: 5px;}
+    
+}
+
+
+
+</style>
+
+</head>
+<body onload="slaid_vacation(); main(); home_page();">
+
+    <div class="book_now_conteiner">
+        <div class="close_book_now_conteiner">
+           <h1>Book a tour online now</h1> <img id="close_book_form" src="">
+        </div>
+
+        
+        <div class="user_info"><samp>note!</samp>Please fill in the required fields marked with a <samp style="background: none; margin: 0; padding: 0;">*</samp> symbol</div>
+
+<form  id="book_now_form" class="book_now_form" action="action">
+
+    <li><img src="img/icon/person.png"> <input type="text" id="user_name" name="name" placeholder="you name"><span title="Please enter your name as it appears on your ID">?</span><samp class="simbolo">*</samp></li>
+    <li><img src="img/icon/_gmail.png"><input type="email"  id="user_email" name="email" placeholder="you email"><span title="Please enter an email where we can contact you">?</span><samp class="simbolo">*</samp></li>
+    <li><img src="img/icon/phone.png"><input type="tel"  id="user_phone" name="phone" placeholder="you phone"><span title="Please enter a phone number where we can be contacted">?</span><samp class="simbolo">*</samp></li>
+    <li><img src="img/icon/data.png"> <input type="date"  id="book_data" name="data"><span style="margin-left: -10px;" title="Please specify the date you wish to book">?</span></li>
+
+    <div class="vertical-line"></div>
+
+    <div  class="book_tour_list">
+        <img src="img/icon/_tours.png">
+
+            <select id="select_tour" class="book_tour_list_select">
+
+            </select>
+
+    </div>
+
+        <div class="selection">
+
+            <div class="select_lin">
+                <img src="img/icon/rate_car.png">
+                    <select id="select_car" class="select_car">
+                        <option value="none">Choose</option>
+                        <option value="Ford Fusion">Ford Fusion</option>
+                        <option value="Toyota Camry">Toyota Camry</option>
+                        <option value="Mercedes-Benz GL">Mercedes-Benz GL</option>
+                        <option value="Ford Escape">Ford Escape</option>
+                        <option value="Mercedes-Benz Vito">Mercedes-Benz Vito</option>
+                    </select>
+            </div>
+
+                <div class="select_lin">
+                    <img src="img/icon/food1.png">
+                        <select id="select_food" class="select_food">
+                            <option value="none">Choose</option>
+                            <option value="Breakfast">Breakfast</option>
+                            <option value="Dinner">Dinner</option>
+                            <option value="coffee">coffee</option>
+                        </select>
+                </div>
+
+
+
+        </div>
+        
+            <div class="comentar">
+                <img src="img/icon/coment.png">
+            <textarea id="user_coment"  class="you_message" name="message"cols="30" rows="4"  placeholder="write you message hear..."></textarea>
+            </div>
+
+                <input id="send_now" class="btn" type="button" value="send" title="send">
+</form>
+
+    </div>
+
+
+    <header class="header head_baner">
+
+       <a href="geo/index.html">  <div class="lang">
+            <img src="img/icon/geo.png">
+        </div>
+    </a>
+
+        <img class="slider_image" id="first"  src="">
+            <img class="slider_image" id="second"  src="">
+
+                    <nav class="navigation">
+
+                        <div class="logo"> <img class="logo_img" src="img/logo.png"></div>
+
+                            <div class="nav_rigth">
+
+                                <ul class="head_cont">
+                                    <li  id="phone" class="phone">
+                                        <div class="head_cont_icon">
+                                            <img  class="head_cont_icon_image phone_icons" src="img/icon/phone.png">
+                                        </div>
+                                            <div class="head_cont_icon_text">
+                                                (+995) 577 19-75-83
+                                            </div>
+                                    </li>
+                                        <li class="mail">
+                                        <div class="head_cont_icon">
+                                            <img class="head_cont_icon_image" src="img/icon/gmail.png">
+                                        </div>
+                                        <div class="head_cont_icon_text">touristagency0@gmail.com</div>
+                                        </li>
+                                    
+                                    </ul>
+                            <div id="mob_menu_btn" class="mob_menu_btn">
+                                <div id="line1" class="line"></div>
+                                <div id="line2" class="line"></div>
+                                <div id="line3" class="line"></div>
+                            </div>
+                
+                            <ul id="meniu" class="meniu">
+
+                                <li class="home">HOME</li>
+                                <li class="about">ABOUT</li>
+                                <li class="tours">TOURS</li>
+                                <li class="cars">CARS</li>
+                                <li class="gallery">GALLERY</li>
+                                <li class="contact">CONTACT</li>
+                            </ul>
+                            </div>
+                            
+                    </nav>
+
+        <div class="home_head_info">
+
+            <ul class="turs_info">
+
+                <li id="turs_info_satauri" class="turs_info_satauri"></li>
+
+                    <li>
+                        <div class="turs_info_icon"><img  id="cars_icons" src="img/icon/icon-car1.png"></div>
+
+                        <div class="turs_info_text">
+                            <select class="turs_info_text_archeva">
+                                <option value="none">Choose</option>
+                                <option value="Ford Fusion">Ford Fusion</option>
+                                <option value="Toyota Camry">Toyota Camry</option>
+                                <option value="Mercedes-Benz GL">Mercedes-Benz GL</option>
+                                <option value="Ford Escape">Ford Escape</option>
+                                <option value="Mercedes-Benz Vito">Mercedes-Benz Vito</option>
+                            </select>
+                        </div> 
+                    </li>
+                        <li>
+                            <div class="turs_info_icon"><img id="kveba_icons"  src="img/icon/food1.png"></div>
+                                <div class="turs_info_text">
+                                    <select class="turs_info_text_archeva">
+                                        <option value="none">Choose</option>
+                                        <option value="Breakfast">Breakfast</option>
+                                        <option value="Dinner">Dinner</option>
+                                        <option value="coffee">coffee</option>
+                                    </select>
+                                </div> 
+                        </li>
+                            <li>
+                                <div class="turs_info_icon"><img id="location_icons"  src="img/icon/loc2.png"></div>
+                                    <div id="mandzili" class="turs_info_text"></div> 
+                            </li>
+                                <li class="other">
+                                    <div class="animation">
+                                        <div class="points"></div>
+                                        <div class="points"></div>
+                                        <div class="points"></div>
+                                        <div class="points"></div>
+                                        <div class="points"></div>
+                                        <div class="points"></div>
+                                        <div class="points"></div>
+                                        <div class="points"></div>
+                                        <div class="points"></div>
+                                        <div class="points"></div>
+                                        <div class="points"></div>
+                                        <div class="points"></div>
+                                        <div class="points"></div>
+                                        <div class="points"></div>
+                                        <div class="points"></div>
+                                        <div class="points"></div>
+                                        <div class="points"></div>
+                                        <div class="points"></div>
+                                        <div class="points"></div>
+                                        <div class="points"></div>
+                                    </div>
+                                </li>
+                                    <li class="turs_info_booknow">
+                                        <div id="book_uour_now" class="book_now">Book now</div>
+                                    </li>
+
+            </ul>
+
+                <ul id="baner_about_me" class="baner_about_me">
+
+                    <li  class="baner_about_me_head">attention!!!</li>
+                    <li class="baner_about_me_text">
+                        Our tourist company "<b style="color:rgb(254, 3, 3);">Vacation in Georgia</b>" offers well-organized, customized tours in the most beautiful corners of Georgia.
+                        The service includes the planning of a one-day or multi-day tour of your choice and implementation according to your wishes, transportation and other services by pre-order.
+                        Your comfort and safety is our priority.
+                    </li>
+
+                    <li>Locat:Kvemo-Kartli, Tsalka.</li>
+                    <li>Phone:(+995) 571 07 89 58</li>
+                    <li>thanks you for your trust.</li>
+                    <li class="rear_more_homebaner" ><a class="rear_more_homebaner" href="about.html">Read more</a></li>
+                </ul>
+
+
+
+
+                
+                
+                        <!-- <p>
+                            ჩვენი ტურისტული კომპანია "Vacation in Georgia" გთავაზობთ კარგად ორგანიზებულ, თქვენზე მორგებულ ტურესბ საქართველოს ულამაზეს კუთხეებში.
+                            სერვისი მოიცავს თქვენს მიერ შერჩეული ერთი ან მრავალდღიანი ტურის დაგეგმვასა და თქვენი სურვილის შესაბამისად განხორციელებას, ტრანსპორტირებასა და სხვა სახის მომსახურებას წინასწარი შეკვეთით.
+                            თქვენი კომფორტი და უსაფრთხოება ჩვენი პრიორიტეტია.
+                            ჩვენი მისამართია: ქვემო ქართლი, წალკა.
+                            ტელეფონი:(+995) 571 07 89 58
+                            მადლობას გიხდით ნდობისთვის.
+                
+                        </p> -->
+
+        </div>
+
+
+
+
+    </header>
+
+        <div id="slider_nav" class="slider_nav">
+
+        </div>
+
+
+
+<section class="body_section">
+
+    <h1 class="h1_title" >About Georgia</h1>
+
+<section class="section">
+        <div class="about_georgia_image">
+            <!-- <img src="">
+                <img src="">
+                    <img src="">
+                        <img src=""> -->
+        </div>
+            <article   class="about_georgia_text">
+                                            <h1 class="home_head_title" >About Georgia</h1>
+
+                <p>
+                    <b>
+                        Rich Cultural Heritage:</b> Georgia has a rich and ancient cultural heritage, with a history 
+                        dating back thousands of years. The country is known for its UNESCO World Heritage Sites, 
+                        such as the historic districts of Tbilisi and Mtskheta, the cave city of Uplistsikhe, 
+                        and the medieval monasteries of Gelati and Jvari. Visitors can explore ancient 
+                        fortresses, churches, and traditional villages, experiencing the unique 
+                        Georgian culture and traditions
+                </p>
+                <div>*****</div>
+            </article>
+</section>
+
+    <section class="section">
+        <div class="about_georgia_image">
+            <!-- <img src="">
+                <img src="">
+                    <img src="">
+                        <img src=""> -->
+        </div>
+            <article>
+                                            <h1 class="home_head_title" >Wine and Gastronomy</h1>
+
+                <p>
+                    <b>
+                        Wine and Gastronomy: </b>  Georgia is one of the oldest wine-producing 
+                        regions in the world, with a history of winemaking that spans over 
+                        8,000 years. The traditional Georgian winemaking method using 
+                        qvevri (large clay vessels buried underground) has been 
+                        recognized by UNESCO as an Intangible Cultural 
+                        Heritage. Visitors can indulge in wine 
+                        tastings, vineyard tours, and 
+                        authentic Georgian cuisine, 
+                        which featuresdelicious 
+                        dishes like khachapuri 
+                        (cheese-filled bread) 
+                        and khinkali 
+                        (dumplings).
+                </p>
+                <div>*****</div>
+
+            </article>
+    </section>
+
+        <section class="section">
+            <div class="about_georgia_image">
+                <!-- <img src="">
+                    <img src="">
+                        <img src="">
+                            <img src=""> -->
+            </div>
+                <article> 
+                                                   <h1 class="home_head_title">Adventure Tourism</h1>
+
+                    <p>
+                        <b> 
+                            Adventure Tourism:</b>  For thrill-seekers, Georgia offers a range of adventure activities. 
+                            You can go hiking in the stunning mountain trails of Svaneti or Kazbegi, try paragliding 
+                            over the scenic landscapes, or go skiing in world-class resorts like Gudauri and 
+                            Bakuriani. The country also offers opportunities for 
+                            horseback riding, rafting, and rock climbing. 
+                    </p>
+                    <div>*****</div>
+
+                </article>
+        </section>
+
+            <section class="section">
+                <div class="about_georgia_image">
+                    <!-- <img src="">
+                        <img src="">
+                            <img src="">
+                                <img src=""> -->
+                </div>
+                    <article> 
+                                                           <h1 class="home_head_title">Film Tourism:</h1>
+
+                        <p>
+                            <b> 
+                                Film Tourism:</b>  Georgia has gained popularity as a filming 
+                                location for international movies and TV series. The breathtaking scenery 
+                                and unique architecture have attracted productions like "Game of 
+                                Thrones," "The Chronicles of Narnia," and "Fast & Furious 9." 
+                                Film enthusiasts can visit the filming locations and 
+                                explore the settings of their 
+                                favorite movies and shows
+                        </p>
+                        <div>*****</div>
+
+                    </article>
+            </section>
+
+                <section class="section">
+                    <div class="about_georgia_image">
+                        <!-- <img src="">
+                            <img src="">
+                                <img src="">
+                                    <img src=""> -->
+                    </div>
+                        <article>
+                                                                    <h1 class="home_head_title">Hospitality:</h1>
+
+                            <p>
+                                <b> 
+                                    Hospitality and Warmth:</b> Georgians are known for their exceptional hospitality and warmth towards visitors. 
+                                    The concept of "Georgian Supra" reflects the traditional feast where guests are treated with great 
+                                    respect and generosity. This cultural aspect creates a welcoming and friendly atmosphere for 
+                                    tourists, enhancing their overall experience in the country.
+                                </p>
+                                <div>*****</div>
+
+                        </article>
+                </section>
+
+                    <section class="section">
+                        <div class="about_georgia_image">
+                            <!-- <img src="">
+                                <img src="">
+                                    <img src="">
+                                        <img src=""> -->
+                        </div>
+                            <article>
+                                                                            <h1 class="home_head_title">Ease of Travel</h1>
+
+                                <p>
+                                    <b> 
+                                        Ease of Travel:</b> Georgia offers a relatively straightforward visa policy for many nationalities, 
+                                        with visa-free entry for citizens of numerous countries. The country has modern transportation 
+                                        infrastructure, including international airports in Tbilisi and Kutaisi, and an extensive 
+                                        network of highways and railways, making it convenient to travel within the country.
+                                    </p>
+                                    <div>*****</div>
+
+                            </article>
+                    </section>
+
+                        <section class="section">
+                            <div class="about_georgia_image"> </div> 
+
+                                <article>
+                                    <p>
+                                        <b> 
+                                            Sustainable Tourism:</b>
+                                            Georgia is increasingly focused on sustainable tourism practices, aiming to preserve its natural and cultural heritage. 
+                                            There are initiatives promoting eco-friendly accommodations, community-based tourism projects, and responsible travel experiences that 
+                                            contribute to the local economy and support local communities. These are just a few highlights of Georgia's tourism potential. 
+                                            The country continues to evolve as a popular destination, offering a unique blend of natural beauty, cultural heritage, 
+                                            and warm hospitality to visitors from around the world.             
+                                    </p>
+
+                                            <div>*****</div>
+
+                                </article>
+                        </section>
+
+
+</section>
+
+<div id="social_conteiner" class="social_conteiner">
+    <div id="float_btn" class="float"> <img id="float_btn_img" src="img/icon/messenger.png"></div>
+        <div id="wats" class="soc_icons wast"> <img src="img/icon/whatsapp.png"></div>
+        <div id="vib" class="soc_icons vib"> <img src="img/icon/viber.png"> </div>
+        <div id="mes" class="soc_icons mes"> <img src="img/icon/messenger.png"> </div>
+</div>
+
+<footer  id="footer">
+    <ul>
+
+        <li class="title">Admin</li>
+
+
+        <li>roland artmeladze</li>
+        <li>+995 595 03 56 68</li>
+        <li>rartmeladze@gmail.com</li>
+    </ul>
+        <ul>
+            <li  class="title">Meniu</li>
+            <li>Tours</li>
+            <li>Cars</li>
+            <li>Gallery</li>
+        </ul>
+            <ul>
+                <li  class="title">Contact</li>
+                <li>touristagency0@gmail.com</li>
+                <li>(+995) 577 19-75-83</li>
+                <li>Kvemo-Kartli, Tsalka.</li>
+            </ul>
+            <div class="adnin_info">@ Roland Artmeladze   2023</div>
+</footer>
+
+    
+    <script src="main.js"></script>
+
+</body>
+</html>
